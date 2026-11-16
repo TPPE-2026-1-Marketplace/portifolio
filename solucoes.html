@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soluções — DK Fashion</title>
+  <meta name="description" content="Os seis módulos do DK Fashion: loja online, pagamento e entrega, PDV, gestão administrativa, clientes e marketing, equipe e metas.">
+  <meta name="theme-color" content="#f7f2ec">
+  <link rel="icon" href="assets/img/dk-logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="brand" href="index.html" aria-label="DK Fashion — início">
+      <span class="brand-mark">DK<small>FASHION</small></span>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-sub">Portfólio de soluções<br>para o varejo</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="solucoes.html" aria-current="page">Soluções</a></li>
+      <li><a href="engenharia.html">Engenharia</a></li>
+      <li><a href="processo.html">Processo e equipe</a></li>
+      <li class="nav-cta"><a class="btn btn-dark btn-sm" href="https://marketplace-frontend-latest-wv05.onrender.com/" target="_blank" rel="noopener">Ver a loja no ar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Soluções</span>
+      <h1>Seis módulos que nasceram de uma <span class="rose">loja real</span>.</h1>
+      <p class="lead">Cada módulo está documentado pelo que resolve, pelo que entrega hoje e pelas histórias de usuário que o originaram. Os números <span class="mono">US##</span> remetem ao <a href="https://github.com/TPPE-2026-1-Marketplace/documentacao/blob/main/docs/backlog.md" target="_blank" rel="noopener" style="text-decoration:underline">backlog do projeto</a>.</p>
+    </div>
+  </div>
+
+  <div class="wrap docs">
+    <aside class="toc" aria-label="Nesta página">
+      <p>Nesta página</p>
+      <ol>
+        <li><a href="#loja">01 · Loja online</a></li>
+        <li><a href="#checkout">02 · Pagamento e entrega</a></li>
+        <li><a href="#pdv">03 · PDV</a></li>
+        <li><a href="#gestao">04 · Gestão</a></li>
+        <li><a href="#clientes">05 · Clientes e marketing</a></li>
+        <li><a href="#equipe">06 · Equipe e metas</a></li>
+        <li><a href="#combinar">Como combinar</a></li>
+      </ol>
+    </aside>
+
+    <div class="docs-body">
+
+      <!-- 01 LOJA -->
+      <section id="loja">
+        <div class="sol-head reveal">
+          <span class="idx">01</span>
+          <div>
+            <h2>Loja online</h2>
+            <p class="kicker">Uma vitrine que vende o ano inteiro. Catálogo organizado pelo jeito que a cliente pensa: pela ocasião.</p>
+          </div>
+        </div>
+        <div class="browser shot reveal">
+          <div class="browser-bar"><i></i><i></i><i></i><span>dk-fashion · página inicial</span></div>
+          <img src="assets/img/telas/home.png" alt="Página inicial da loja DK Fashion com banner de nova coleção e menu por ocasião." loading="lazy">
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Página inicial</b> com banners gerenciáveis, categorias e exatamente 8 produtos em destaque (RNF02).</span></li>
+              <li><span><b>Busca e filtros</b> por ocasião, comprimento, tamanho, cor e faixa de preço.</span></li>
+              <li><span><b>Detalhe do produto</b> com fotos, variações de cor e tamanho, tabela de medidas e disponibilidade.</span></li>
+              <li><span><b>Carrinho e favoritos</b> integrados ao estoque em tempo real.</span></li>
+              <li><span><b>Conta da cliente</b> com histórico de pedidos e endereços salvos.</span></li>
+              <li><span><b>Avaliações</b> com estrelas e comentário, só para quem comprou. A média é recalculada na mesma transação ao editar ou remover, e o gerente modera.</span></li>
+              <li><span><b>Atendimento pelo WhatsApp</b> a um clique.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US02</span><span class="tag">US03</span><span class="tag">US04</span><span class="tag">US05</span><span class="tag">US06</span><span class="tag">US07</span><span class="tag">US08</span><span class="tag">US09</span><span class="tag">US10</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>products</code> <code>product-variants</code> <code>categories</code> <code>images</code> <code>reviews</code></dd></div>
+                <div><dt>Interface</dt><dd>React SPA responsiva, design system próprio a partir do Figma</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> o modelo de produto com variantes por SKU (cor × tamanho) atende de calçados a acessórios. As categorias por ocasião são só dados, e podem virar coleções, estações ou linhas.</p>
+        </div>
+      </section>
+
+      <!-- 02 CHECKOUT -->
+      <section id="checkout">
+        <div class="sol-head reveal">
+          <span class="idx">02</span>
+          <div>
+            <h2>Pagamento e entrega</h2>
+            <p class="kicker">Checkout completo dentro da plataforma, sem mandar a cliente para fora do site.</p>
+          </div>
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Pix, cartão de crédito (1 a 12x) e débito</b>, com o status do pagamento refletido no pedido.</span></li>
+              <li><span><b>Gateway plugável</b> (Strategy Pattern): o provedor é escolhido por configuração. Hoje há InfinitePay e um provedor simulado para testes.</span></li>
+              <li><span><b>Estoque protegido:</b> pagamento recusado ou cancelado devolve as peças ao estoque automaticamente.</span></li>
+              <li><span><b>Cálculo de frete e prazo</b> antes de fechar a compra, via integração com Melhor Envio.</span></li>
+              <li><span><b>Retirada na loja física</b> para quem quer economizar o frete.</span></li>
+              <li><span><b>Código de rastreio</b> inserido pela equipe e exibido para a cliente.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US15</span><span class="tag">US16</span><span class="tag">US17</span><span class="tag">US18</span><span class="tag neutral">RNF03</span><span class="tag neutral">RNF04</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>orders</code> <code>payments</code> <code>shipping</code> <code>addresses</code></dd></div>
+                <div><dt>Fluxo</dt><dd><code>pending</code> → <code>paid</code> | <code>failed</code> | <code>refunded</code>, confirmado por webhook</dd></div>
+                <div><dt>No roteiro</dt><dd>Emissão de NF-e com certificado digital (RNF04)</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> trocar de adquirente é escrever um novo provedor que implementa a mesma interface <code>IPaymentGateway</code>. Nada no restante do sistema muda.</p>
+        </div>
+      </section>
+
+      <!-- 03 PDV -->
+      <section id="pdv">
+        <div class="sol-head reveal">
+          <span class="idx">03</span>
+          <div>
+            <h2>PDV: venda no balcão</h2>
+            <p class="kicker">O caixa da loja física, ligado ao mesmo estoque e à mesma base de clientes do site.</p>
+          </div>
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Venda presencial ágil:</b> busca da peça, escolha de cor e tamanho, pagamento e fechamento em uma tela.</span></li>
+              <li><span><b>Baixa automática de estoque</b> na quantidade vendida, o que evita vender online uma peça que já saiu da loja (RNF01).</span></li>
+              <li><span><b>Vendedor vinculado</b> a cada transação, que alimenta comissão e ranking.</span></li>
+              <li><span><b>Cadastro rápido de clientes</b> no balcão para formar a base comercial.</span></li>
+              <li><span><b>Acesso para todos os funcionários</b>, separado do painel de gestão.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US11</span><span class="tag">US19</span><span class="tag">US24</span><span class="tag neutral">RNF01</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>orders</code> <code>inventory</code> <code>people</code> <code>employees</code></dd></div>
+                <div><dt>Interface</dt><dd>Rota <code>/pdv</code>, acessada após a seleção de módulo no login da equipe</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> o PDV funciona sem a loja online. É a porta de entrada natural para quem ainda não vende pela internet mas quer organizar o caixa.</p>
+        </div>
+      </section>
+
+      <!-- 04 GESTÃO -->
+      <section id="gestao">
+        <div class="sol-head reveal">
+          <span class="idx">04</span>
+          <div>
+            <h2>Gestão administrativa</h2>
+            <p class="kicker">Um painel só para estoque, pedidos, produtos, equipe e indicadores, com cada um vendo só o que precisa.</p>
+          </div>
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Visão geral</b> com indicadores de vendas e relatórios para decisões rápidas.</span></li>
+              <li><span><b>Produtos e estoque</b> com cadastro completo, imagens, variantes e saldo por canal.</span></li>
+              <li><span><b>Histórico auditável</b> de cada alteração de estoque: quem mudou, quando, e o valor antes e depois.</span></li>
+              <li><span><b>Pedidos</b> online e presenciais em um lugar, incluindo retiradas na loja e rastreio.</span></li>
+              <li><span><b>Funcionários</b> com cargo e taxa de comissão.</span></li>
+              <li><span><b>Banners</b> da vitrine editáveis pela própria loja.</span></li>
+              <li><span><b>Níveis de acesso</b> para cliente, caixa, vendedor, gerente e administrador.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US01</span><span class="tag">US18</span><span class="tag">US22</span><span class="tag">US23</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>inventory</code> <code>products</code> <code>employees</code> <code>auth</code> <code>images</code></dd></div>
+                <div><dt>Telas</dt><dd>Visão geral, Estoque, Produtos, Pedidos, Vendas PDV, Relatórios, Funcionários, Banners, Retirada</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> é o módulo que tira a operação do papel. Pode ser adotado sozinho, como sistema de estoque e pedidos, antes de qualquer canal de venda digital.</p>
+        </div>
+      </section>
+
+      <!-- 05 CLIENTES -->
+      <section id="clientes">
+        <div class="sol-head reveal">
+          <span class="idx">05</span>
+          <div>
+            <h2>Clientes e marketing</h2>
+            <p class="kicker">Transformar quem já comprou em quem volta a comprar.</p>
+          </div>
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Base de clientes unificada</b>, com quem compra no site e quem compra no balcão no mesmo cadastro.</span></li>
+              <li><span><b>Exportação em CSV</b> pronta para campanhas de tráfego pago.</span></li>
+              <li><span><b>Cupons de desconto</b> por percentual e por produto.</span></li>
+              <li><span><b>Cupons de parceiros</b> que rastreiam a origem da venda e a bonificação de cada parceiro.</span></li>
+              <li><span><b>Crédito de troca</b> emitido como cupom em devoluções (RNF05).</span></li>
+              <li><span><b>Privacidade by design:</b> excluir a conta anonimiza os dados pessoais, em linha com a LGPD.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US02</span><span class="tag">US11</span><span class="tag">US12</span><span class="tag">US13</span><span class="tag">US14</span><span class="tag neutral">RNF05</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>people</code> <code>coupons</code> <code>addresses</code></dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> cupons de parceiros são ideais para quem trabalha com influenciadoras, cerimonialistas ou assessorias, porque mostram quem trouxe cada venda.</p>
+        </div>
+      </section>
+
+      <!-- 06 EQUIPE -->
+      <section id="equipe">
+        <div class="sol-head reveal">
+          <span class="idx">06</span>
+          <div>
+            <h2>Equipe e metas</h2>
+            <p class="kicker">Comissão sem planilha e metas que o time enxerga.</p>
+          </div>
+        </div>
+        <div class="sol-grid">
+          <div class="panel reveal">
+            <h4>O que entrega</h4>
+            <ul class="checks">
+              <li><span><b>Comissão automática</b> sobre o acumulado mensal de vendas de cada vendedor.</span></li>
+              <li><span><b>Metas mensais</b> individuais e coletivas, definidas pela administração.</span></li>
+              <li><span><b>Ranking de vendedores</b> com dados reais da API.</span></li>
+              <li><span><b>Barras de progresso</b> no painel para acompanhar cada meta.</span></li>
+            </ul>
+          </div>
+          <div class="side-stack">
+            <div class="panel reveal">
+              <h4>Origem</h4>
+              <div class="tags"><span class="tag">US19</span><span class="tag">US20</span><span class="tag">US21</span><span class="tag">US25</span><span class="tag">US26</span></div>
+            </div>
+            <div class="panel reveal">
+              <h4>Por baixo</h4>
+              <dl class="kv">
+                <div><dt>API</dt><dd><code>sales-goals</code> <code>employees</code> <code>orders</code></dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="reuse reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <p><b>Para outras lojas:</b> serve a qualquer equipe comissionada, de óticas a lojas de móveis, e dá transparência ao cálculo que costuma gerar atrito.</p>
+        </div>
+      </section>
+
+      <!-- COMBINAR -->
+      <section id="combinar">
+        <div class="reveal">
+          <span class="eyebrow">Como combinar</span>
+          <h2 style="margin-top:14px">Começar pequeno, crescer junto</h2>
+          <p class="lead" style="margin-top:16px">Como todos os módulos usam a mesma API, cada loja pode entrar pelo ponto que mais dói hoje. Alguns caminhos possíveis:</p>
+        </div>
+        <div class="bundles">
+          <div class="bundle reveal">
+            <span class="tag neutral">Organizar a loja</span>
+            <h3>PDV + Gestão</h3>
+            <p>Para quem ainda vende só no balcão e quer sair do caderno.</p>
+            <ul><li>Estoque e histórico</li><li>Caixa e vendedores</li><li>Relatórios</li></ul>
+          </div>
+          <div class="bundle reveal">
+            <span class="tag neutral">Vender online</span>
+            <h3>Loja + Pagamento e entrega</h3>
+            <p>Para quem já tem gestão e quer abrir o canal digital.</p>
+            <ul><li>Vitrine e catálogo</li><li>Checkout com Pix e cartão</li><li>Frete e retirada</li></ul>
+          </div>
+          <div class="bundle hl reveal">
+            <span class="tag">Operação conectada</span>
+            <h3>Os seis módulos</h3>
+            <p>O cenário da DK Fashion: um estoque, uma base de clientes, dois canais.</p>
+            <ul><li>Tudo dos anteriores</li><li>CRM e cupons</li><li>Metas e comissões</li></ul>
+          </div>
+        </div>
+
+        <nav class="pager" aria-label="Navegação entre páginas">
+          <a href="index.html"><small>Anterior</small><span>Início</span></a>
+          <a class="next" href="engenharia.html"><small>Próxima</small><span>Engenharia</span></a>
+        </nav>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-mark">DK<small>FASHION</small></span>
+        <p style="margin-top:18px;max-width:34ch">Desenvolvido com uma loja real. Projeto acadêmico da Universidade de Brasília.</p>
+      </div>
+      <div>
+        <h4>Portfólio</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="engenharia.html">Engenharia</a></li>
+          <li><a href="processo.html">Processo e equipe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Frontend" target="_blank" rel="noopener">Frontend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Backend" target="_blank" rel="noopener">Backend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/documentacao" target="_blank" rel="noopener">Documentação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Disciplinas</h4>
+        <ul>
+          <li>TPPE · 2026.1</li>
+          <li>GCES · 2026.2</li>
+          <li>Universidade de Brasília</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>DK Fashion · Sua loja conectada. Sua gestão no controle.</span>
+      <span>© <span data-year>2026</span> Equipe TPPE-2026-1-Marketplace</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

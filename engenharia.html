@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engenharia — DK Fashion</title>
+  <meta name="description" content="Arquitetura, stack, dados, segurança, qualidade e entrega contínua do DK Fashion.">
+  <meta name="theme-color" content="#f7f2ec">
+  <link rel="icon" href="assets/img/dk-logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="brand" href="index.html" aria-label="DK Fashion — início">
+      <span class="brand-mark">DK<small>FASHION</small></span>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-sub">Portfólio de soluções<br>para o varejo</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="solucoes.html">Soluções</a></li>
+      <li><a href="engenharia.html" aria-current="page">Engenharia</a></li>
+      <li><a href="processo.html">Processo e equipe</a></li>
+      <li class="nav-cta"><a class="btn btn-dark btn-sm" href="https://marketplace-frontend-latest-wv05.onrender.com/" target="_blank" rel="noopener">Ver a loja no ar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Engenharia</span>
+      <h1>Por trás da vitrine, uma base <span class="rose">feita para durar</span>.</h1>
+      <p class="lead">Como o sistema é construído, testado, protegido e publicado. É isso que permite oferecer os módulos a outras lojas com confiança.</p>
+    </div>
+  </div>
+
+  <div class="wrap docs">
+    <aside class="toc" aria-label="Nesta página">
+      <p>Nesta página</p>
+      <ol>
+        <li><a href="#arquitetura">Arquitetura</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#dados">Modelo de dados</a></li>
+        <li><a href="#qualidade">Qualidade</a></li>
+        <li><a href="#seguranca">Segurança e LGPD</a></li>
+        <li><a href="#entrega">Entrega contínua</a></li>
+      </ol>
+    </aside>
+
+    <div class="docs-body">
+
+      <!-- ARQUITETURA -->
+      <section id="arquitetura">
+        <div class="reveal">
+          <span class="eyebrow">Arquitetura</span>
+          <h2 style="margin-top:14px">Três interfaces, uma API</h2>
+          <p class="lead" style="margin-top:16px">Loja, PDV e gestão são áreas da mesma aplicação web e falam com uma única API REST. É isso que garante um estoque e uma base de clientes só. Integrações externas ficam isoladas atrás de interfaces.</p>
+        </div>
+        <div class="diagram reveal" style="margin-top:30px">
+          <svg viewBox="0 0 1000 400" role="img" aria-label="Diagrama de arquitetura: clientes e equipe acessam o frontend React, que consome a API NestJS, que usa PostgreSQL e integra InfinitePay e Melhor Envio.">
+            <defs>
+              <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7b716d"/></marker>
+            </defs>
+            <!-- atores -->
+            <g font-size="13">
+              <rect x="10" y="70" width="150" height="70" rx="12" fill="#f7f2ec" stroke="#e4d9cf"/>
+              <text x="85" y="101" text-anchor="middle" font-weight="600" fill="#221e1d">Cliente</text>
+              <text x="85" y="120" text-anchor="middle" fill="#7b716d" font-size="11.5">navegador / celular</text>
+              <rect x="10" y="240" width="150" height="70" rx="12" fill="#f7f2ec" stroke="#e4d9cf"/>
+              <text x="85" y="271" text-anchor="middle" font-weight="600" fill="#221e1d">Equipe da loja</text>
+              <text x="85" y="290" text-anchor="middle" fill="#7b716d" font-size="11.5">caixa · vendedor · gerente</text>
+            </g>
+            <!-- frontend -->
+            <rect x="220" y="30" width="250" height="320" rx="16" fill="#fffdfa" stroke="#e2768a" stroke-width="1.5"/>
+            <text x="345" y="64" text-anchor="middle" class="serif" font-size="20" fill="#221e1d" style="font-family:'Playfair Display',serif">Frontend SPA</text>
+            <text x="345" y="84" text-anchor="middle" font-size="11.5" fill="#7b716d">React · TypeScript · Vite · nginx</text>
+            <g font-size="13" font-weight="600" text-anchor="middle">
+              <rect x="245" y="105" width="200" height="54" rx="10" fill="#f6dde1"/><text x="345" y="137" fill="#c4566c">Loja online</text>
+              <rect x="245" y="175" width="200" height="54" rx="10" fill="#f6dde1"/><text x="345" y="207" fill="#c4566c">PDV · /pdv</text>
+              <rect x="245" y="245" width="200" height="54" rx="10" fill="#f6dde1"/><text x="345" y="277" fill="#c4566c">Gestão · /painel</text>
+            </g>
+            <text x="345" y="330" text-anchor="middle" font-size="11" fill="#7b716d">login com seleção de módulo por perfil</text>
+            <!-- api -->
+            <rect x="530" y="30" width="230" height="320" rx="16" fill="#221e1d"/>
+            <text x="645" y="64" text-anchor="middle" font-size="20" fill="#fff" style="font-family:'Playfair Display',serif">API REST</text>
+            <text x="645" y="84" text-anchor="middle" font-size="11.5" fill="#bdb2ab">NestJS · TypeORM · Zod · JWT</text>
+            <g font-size="11" fill="#f3ece6" text-anchor="middle">
+              <rect x="550" y="104" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="121">auth</text>
+              <rect x="650" y="104" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="121">products</text>
+              <rect x="550" y="138" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="155">variants</text>
+              <rect x="650" y="138" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="155">inventory</text>
+              <rect x="550" y="172" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="189">orders</text>
+              <rect x="650" y="172" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="189">payments</text>
+              <rect x="550" y="206" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="223">shipping</text>
+              <rect x="650" y="206" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="223">coupons</text>
+              <rect x="550" y="240" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="257">people</text>
+              <rect x="650" y="240" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="257">reviews</text>
+              <rect x="550" y="274" width="90" height="26" rx="13" fill="#3a3433"/><text x="595" y="291">sales-goals</text>
+              <rect x="650" y="274" width="90" height="26" rx="13" fill="#3a3433"/><text x="695" y="291">employees</text>
+            </g>
+            <text x="645" y="330" text-anchor="middle" font-size="11" fill="#bdb2ab">81 endpoints · Swagger em /docs</text>
+            <!-- externos -->
+            <g font-size="13">
+              <rect x="820" y="30" width="170" height="80" rx="12" fill="#f7f2ec" stroke="#221e1d"/>
+              <text x="905" y="65" text-anchor="middle" font-weight="600" fill="#221e1d">PostgreSQL 16</text>
+              <text x="905" y="85" text-anchor="middle" fill="#7b716d" font-size="11.5">TLS · migrations</text>
+              <rect x="820" y="150" width="170" height="54" rx="12" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="905" y="174" text-anchor="middle" font-weight="600" fill="#221e1d">InfinitePay</text>
+              <text x="905" y="192" text-anchor="middle" fill="#7b716d" font-size="11">pagamentos · webhook</text>
+              <rect x="820" y="220" width="170" height="54" rx="12" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="905" y="244" text-anchor="middle" font-weight="600" fill="#221e1d">Melhor Envio</text>
+              <text x="905" y="262" text-anchor="middle" fill="#7b716d" font-size="11">frete · OAuth2</text>
+              <rect x="820" y="290" width="170" height="54" rx="12" fill="none" stroke="#b9a99c" stroke-dasharray="5 5"/>
+              <text x="905" y="314" text-anchor="middle" font-weight="600" fill="#7b716d">NF-e</text>
+              <text x="905" y="332" text-anchor="middle" fill="#7b716d" font-size="11">próximo passo</text>
+            </g>
+            <!-- setas -->
+            <g stroke="#7b716d" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+              <path d="M160 105 H240"/>
+              <path d="M160 275 H240"/>
+              <path d="M470 190 H528"/>
+              <path d="M760 75 H818"/>
+              <path d="M760 177 H818"/>
+              <path d="M760 247 H818"/>
+              <path d="M760 317 H818" stroke-dasharray="4 4"/>
+            </g>
+            <text x="499" y="180" text-anchor="middle" font-size="10.5" fill="#7b716d">HTTPS</text>
+          </svg>
+        </div>
+        <div class="sec-grid" style="margin-top:20px">
+          <div class="sec-item reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+            <div><h4>Camadas por módulo</h4><p>Cada domínio tem controller, service, DTOs validados com Zod e entidades TypeORM. As regras de negócio ficam nos services.</p></div>
+          </div>
+          <div class="sec-item reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+            <div><h4>Integrações desacopladas</h4><p>Pagamento usa Strategy Pattern (<code>IPaymentGateway</code>), e o frete tem um gerenciador de tokens OAuth2 com renovação automática.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section id="stack">
+        <div class="reveal">
+          <span class="eyebrow">Stack</span>
+          <h2 style="margin-top:14px">Tecnologias de mercado, escolhidas com critério</h2>
+        </div>
+        <div class="stack-grid" style="margin-top:30px">
+          <div class="stack-col reveal">
+            <h3>Frontend</h3>
+            <p class="muted">Interface única para loja, PDV e gestão</p>
+            <div class="chips"><span class="chip">React 18</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">Radix UI</span><span class="chip">React Router</span><span class="chip">React Hook Form</span><span class="chip">Recharts</span><span class="chip">Vitest</span><span class="chip">Testing Library</span><span class="chip">Selenium</span></div>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Backend</h3>
+            <p class="muted">API REST documentada e validada</p>
+            <div class="chips"><span class="chip">NestJS 10</span><span class="chip">TypeScript</span><span class="chip">TypeORM</span><span class="chip">PostgreSQL 16</span><span class="chip">Zod</span><span class="chip">JWT + Passport</span><span class="chip">bcrypt</span><span class="chip">Swagger / OpenAPI</span><span class="chip">Pino</span><span class="chip">Helmet</span><span class="chip">Throttler</span><span class="chip">Jest + Supertest</span></div>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Infra e qualidade</h3>
+            <p class="muted">Do commit à produção sem passo manual</p>
+            <div class="chips"><span class="chip">Docker + Compose</span><span class="chip">GitHub Actions</span><span class="chip">GHCR</span><span class="chip">Render</span><span class="chip">SonarCloud</span><span class="chip">MeasureSoftGram</span><span class="chip">Husky</span><span class="chip">ESLint + Prettier</span><span class="chip">MkDocs</span><span class="chip">Streamlit</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DADOS -->
+      <section id="dados">
+        <div class="reveal">
+          <span class="eyebrow">Modelo de dados</span>
+          <h2 style="margin-top:14px">Um estoque, dois canais</h2>
+          <p class="lead" style="margin-top:16px">A decisão central do modelo: cada variante (SKU de cor × tamanho) guarda o saldo <code>qtd_online</code> e o saldo <code>qtd_loja_fisica</code> separados, e toda movimentação vai para <code>stock_log</code> com os valores antes e depois de cada canal. Isso atende ao RNF01 e à auditoria pedida na US23.</p>
+        </div>
+        <figure class="figure reveal" style="margin-top:28px">
+          <a href="assets/img/physical_data_model.png" target="_blank" rel="noopener"><img src="assets/img/physical_data_model.png" alt="Modelo físico do banco de dados com tabelas product, product_variant, stock, stock_log, orders, order_item, payment, person, employee, sales_goal, coupon, review, category e image." loading="lazy"></a>
+          <figcaption>Modelo físico (PostgreSQL). Clique para ampliar.</figcaption>
+        </figure>
+      </section>
+
+      <!-- QUALIDADE -->
+      <section id="qualidade">
+        <div class="reveal">
+          <span class="eyebrow">Qualidade</span>
+          <h2 style="margin-top:14px">Medido a cada push</h2>
+          <p class="lead" style="margin-top:16px">O SonarCloud analisa os dois repositórios a cada push nas branches <code>main</code> e <code>dev</code>. Um workflow exporta as métricas para a documentação, onde um dashboard e o MeasureSoftGram acompanham a evolução. A linha escura em cada barra marca o piso exigido pelo CI.</p>
+        </div>
+        <div class="metrics" style="margin-top:30px">
+          <article class="metric-card reveal">
+            <header><h3>Frontend</h3><span class="tag neutral">SonarCloud · main · 27/10/2026</span></header>
+            <div class="bar"><div class="bar-top"><span>Cobertura de testes</span><b>92,4%</b></div><div class="bar-track"><div class="bar-fill" data-value="92.4"></div></div></div>
+            <div class="bar"><div class="bar-top"><span>Testes com sucesso</span><b>100%</b></div><div class="bar-track"><div class="bar-fill" data-value="100"></div></div></div>
+            <div class="mini-stats">
+              <div><strong>458</strong>testes</div>
+              <div><strong>0%</strong>duplicação</div>
+              <div><strong>22,9 mil</strong>linhas de código</div>
+            </div>
+          </article>
+          <article class="metric-card reveal">
+            <header><h3>Backend</h3><span class="tag neutral">SonarCloud + Jest</span></header>
+            <div class="bar"><div class="bar-top"><span>Cobertura (SonarCloud)</span><b>84,2%</b></div><div class="bar-track"><div class="bar-fill" data-value="84.2"></div></div></div>
+            <div class="bar"><div class="bar-top"><span>Statements (Jest)</span><b>89,4%</b></div><div class="bar-track"><div class="bar-fill" data-value="89.4"></div><span class="bar-floor" style="left:85%" title="Piso do CI: 85%"></span></div></div>
+            <div class="bar"><div class="bar-top"><span>Functions (Jest)</span><b>85,5%</b></div><div class="bar-track"><div class="bar-fill" data-value="85.5"></div><span class="bar-floor" style="left:80%" title="Piso do CI: 80%"></span></div></div>
+            <div class="bar"><div class="bar-top"><span>Branches (Jest)</span><b>71,4%</b></div><div class="bar-track"><div class="bar-fill" data-value="71.4"></div><span class="bar-floor" style="left:70%" title="Piso do CI: 70%"></span></div></div>
+            <div class="mini-stats">
+              <div><strong>A</strong>nota de segurança</div>
+              <div><strong>3,3%</strong>duplicação</div>
+              <div><strong>7,4 mil</strong>linhas de código</div>
+            </div>
+          </article>
+        </div>
+        <p class="muted" style="font-size:.85rem;margin-top:14px">Os valores do Jest vêm da decisão registrada em <a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Backend/blob/main/docs/cobertura-testes.md" target="_blank" rel="noopener" style="text-decoration:underline">docs/cobertura-testes.md</a> (498 testes em 41 suítes). Há testes unitários, parametrizados, de integração com banco real e end-to-end com Selenium.</p>
+      </section>
+
+      <!-- SEGURANÇA -->
+      <section id="seguranca">
+        <div class="reveal">
+          <span class="eyebrow">Segurança e LGPD</span>
+          <h2 style="margin-top:14px">Uma sprint inteira de hardening</h2>
+          <p class="lead" style="margin-top:16px">Na Sprint 02 de GCES, o time de backend tratou segurança e conformidade como entrega, com diagnóstico e script de evidência para cada item.</p>
+        </div>
+        <div class="sec-grid" style="margin-top:28px">
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div><h4>Controle de acesso por dono e cargo</h4><p>Correção de IDOR no cadastro de pessoas: cada um acessa só o que é seu, salvo cargos autorizados.</p></div></div>
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h4>Rate limiting</h4><p>Limites de requisição em login, cadastro e checkout contra força bruta e abuso.</p></div></div>
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M17 8l5 5M22 8l-5 5"/></svg></span><div><h4>Anonimização (LGPD)</h4><p>Excluir a conta anonimiza os dados pessoais e preserva o histórico de vendas.</p></div></div>
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span><div><h4>Cabeçalhos e configuração</h4><p>Helmet, validação de <code>CORS_ORIGINS</code> e tamanho mínimo do <code>JWT_SECRET</code> no boot.</p></div></div>
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h6"/></svg></span><div><h4>Rastreabilidade</h4><p>Filtro global de exceções com correlation ID (<code>x-request-id</code>) e logs estruturados com Pino.</p></div></div>
+          <div class="sec-item reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></span><div><h4>Cadeia de suprimentos</h4><p>Auditoria de dependências, GitHub Actions fixadas por SHA e TLS verificável na conexão com o banco.</p></div></div>
+        </div>
+      </section>
+
+      <!-- ENTREGA -->
+      <section id="entrega">
+        <div class="reveal">
+          <span class="eyebrow">Entrega contínua</span>
+          <h2 style="margin-top:14px">Do commit à loja no ar</h2>
+          <p class="lead" style="margin-top:16px">Frontend e backend seguem o mesmo pipeline. Nenhum deploy é manual: o CD só roda depois do CI verde na <code>main</code> e termina com um smoke test.</p>
+        </div>
+        <div class="diagram reveal" style="margin-top:28px">
+          <svg viewBox="0 0 1000 190" role="img" aria-label="Pipeline: commit com hooks, CI com lint, testes, typecheck e build, SonarCloud, exportação de métricas, CD com imagem no GHCR e deploy no Render, e smoke test.">
+            <defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c4566c"/></marker></defs>
+            <g font-size="12" text-anchor="middle">
+              <rect x="5" y="40" width="140" height="110" rx="14" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="75" y="76" font-weight="600" fill="#221e1d" font-size="14">Commit</text>
+              <text x="75" y="100" fill="#7b716d">hooks de mensagem</text><text x="75" y="118" fill="#7b716d">lint no pre-commit</text>
+
+              <rect x="175" y="40" width="140" height="110" rx="14" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="245" y="76" font-weight="600" fill="#221e1d" font-size="14">CI</text>
+              <text x="245" y="100" fill="#7b716d">lint · testes</text><text x="245" y="118" fill="#7b716d">typecheck · build</text><text x="245" y="136" fill="#7b716d">imagem Docker</text>
+
+              <rect x="345" y="40" width="140" height="110" rx="14" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="415" y="76" font-weight="600" fill="#221e1d" font-size="14">SonarCloud</text>
+              <text x="415" y="100" fill="#7b716d">cobertura</text><text x="415" y="118" fill="#7b716d">bugs · code smells</text>
+
+              <rect x="515" y="40" width="140" height="110" rx="14" fill="#fffdfa" stroke="#e4d9cf"/>
+              <text x="585" y="76" font-weight="600" fill="#221e1d" font-size="14">Métricas</text>
+              <text x="585" y="100" fill="#7b716d">export para docs</text><text x="585" y="118" fill="#7b716d">MeasureSoftGram</text>
+
+              <rect x="685" y="40" width="140" height="110" rx="14" fill="#221e1d"/>
+              <text x="755" y="76" font-weight="600" fill="#fff" font-size="14">CD</text>
+              <text x="755" y="100" fill="#bdb2ab">imagem no GHCR</text><text x="755" y="118" fill="#bdb2ab">deploy no Render</text><text x="755" y="136" fill="#bdb2ab">por digest</text>
+
+              <rect x="855" y="40" width="140" height="110" rx="14" fill="#f6dde1" stroke="#e2768a"/>
+              <text x="925" y="76" font-weight="600" fill="#c4566c" font-size="14">Smoke test</text>
+              <text x="925" y="100" fill="#4a4341">/healthz</text><text x="925" y="118" fill="#4a4341">rotas da SPA</text>
+            </g>
+            <g stroke="#c4566c" stroke-width="1.5" marker-end="url(#arr2)">
+              <line x1="146" y1="95" x2="173" y2="95"/><line x1="316" y1="95" x2="343" y2="95"/>
+              <line x1="486" y1="95" x2="513" y2="95"/><line x1="656" y1="95" x2="683" y2="95"/>
+              <line x1="826" y1="95" x2="853" y2="95"/>
+            </g>
+            <text x="500" y="180" text-anchor="middle" font-size="11.5" fill="#7b716d">push / PR em dev e main → CI · push em main com CI verde → CD</text>
+          </svg>
+        </div>
+
+        <nav class="pager" aria-label="Navegação entre páginas" style="margin-top:56px">
+          <a href="solucoes.html"><small>Anterior</small><span>Soluções</span></a>
+          <a class="next" href="processo.html"><small>Próxima</small><span>Processo e equipe</span></a>
+        </nav>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-mark">DK<small>FASHION</small></span>
+        <p style="margin-top:18px;max-width:34ch">Desenvolvido com uma loja real. Projeto acadêmico da Universidade de Brasília.</p>
+      </div>
+      <div>
+        <h4>Portfólio</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="engenharia.html">Engenharia</a></li>
+          <li><a href="processo.html">Processo e equipe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Frontend" target="_blank" rel="noopener">Frontend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Backend" target="_blank" rel="noopener">Backend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/documentacao" target="_blank" rel="noopener">Documentação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Disciplinas</h4>
+        <ul>
+          <li>TPPE · 2026.1</li>
+          <li>GCES · 2026.2</li>
+          <li>Universidade de Brasília</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>DK Fashion · Sua loja conectada. Sua gestão no controle.</span>
+      <span>© <span data-year>2026</span> Equipe TPPE-2026-1-Marketplace</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Processo e equipe — DK Fashion</title>
+  <meta name="description" content="Como o DK Fashion foi construído: linha do tempo de TPPE e GCES, sprints, clans, práticas e equipe.">
+  <meta name="theme-color" content="#f7f2ec">
+  <link rel="icon" href="assets/img/dk-logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="brand" href="index.html" aria-label="DK Fashion — início">
+      <span class="brand-mark">DK<small>FASHION</small></span>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-sub">Portfólio de soluções<br>para o varejo</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="solucoes.html">Soluções</a></li>
+      <li><a href="engenharia.html">Engenharia</a></li>
+      <li><a href="processo.html" aria-current="page">Processo e equipe</a></li>
+      <li class="nav-cta"><a class="btn btn-dark btn-sm" href="https://marketplace-frontend-latest-wv05.onrender.com/" target="_blank" rel="noopener">Ver a loja no ar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Processo e equipe</span>
+      <h1>Dois semestres, uma cliente, <span class="rose">um produto</span>.</h1>
+      <p class="lead">O DK Fashion começou em Técnicas de Programação em Plataformas Emergentes (TPPE, 2026.1) e amadureceu em Gerência de Configuração e Evolução de Software (GCES, 2026.2), sempre com uma loja real do outro lado.</p>
+    </div>
+  </div>
+
+  <div class="wrap docs">
+    <aside class="toc" aria-label="Nesta página">
+      <p>Nesta página</p>
+      <ol>
+        <li><a href="#linha">Linha do tempo</a></li>
+        <li><a href="#clans">Organização</a></li>
+        <li><a href="#praticas">Práticas</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+      </ol>
+    </aside>
+
+    <div class="docs-body">
+
+      <!-- LINHA DO TEMPO -->
+      <section id="linha">
+        <div class="reveal">
+          <span class="eyebrow">Linha do tempo</span>
+          <h2 style="margin-top:14px">Da elicitação à vitrine comercial</h2>
+        </div>
+        <div class="timeline" style="margin-top:34px">
+          <div class="tl major reveal">
+            <span class="when">Mar – abr 2026 · TPPE</span>
+            <h3>Elicitação com a cliente</h3>
+            <p>Backlog com 26 histórias de usuário, requisitos não funcionais e regras de negócio levantados em conversas com a dona da loja e refinados em versões sucessivas.</p>
+            <div class="tags"><span class="tag neutral">Backlog</span><span class="tag neutral">RNFs</span><span class="tag neutral">Regras de negócio</span></div>
+          </div>
+          <div class="tl reveal">
+            <span class="when">27 – 29 abr · Entrega 1</span>
+            <h3>Protótipo e fundação</h3>
+            <p>Protótipo de alta fidelidade no Figma (web e mobile), ambiente Docker com o primeiro CRUD, banco com pgAdmin e o esqueleto do frontend.</p>
+          </div>
+          <div class="tl reveal">
+            <span class="when">25 – 27 mai · Entrega 2</span>
+            <h3>Arquitetura e qualidade de código</h3>
+            <p>Arquitetura em camadas, lint e clean code, testes parametrizados e de integração, cobertura, banco pronto para produção, modelo físico e integração com APIs externas.</p>
+          </div>
+          <div class="tl reveal">
+            <span class="when">22 – 24 jun · Entrega 3</span>
+            <h3>Produto completo e hospedado</h3>
+            <p>Frontend fiel ao protótipo e responsivo, hospedagem com levantamento de custos e testes automatizados com Selenium rodando contra o site publicado.</p>
+          </div>
+          <div class="tl major reveal">
+            <span class="when">26 ago 2026 · GCES</span>
+            <h3>Nova rodada com a cliente</h3>
+            <p>Reunião de alinhamento aprova a reformulação da interface, a troca de imagens de terceiros por fotos autorais e um novo cronograma.</p>
+            <div class="tags"><span class="tag neutral">Ata de reunião</span></div>
+          </div>
+          <div class="tl reveal">
+            <span class="when">05 – 15 set · Sprint 01</span>
+            <h3>Qualidade contínua e design system <span class="us-count rose">· 30 US</span></h3>
+            <p>SonarCloud no backend e no frontend, pipeline de exportação de métricas e dashboard analítico. Do lado do design, design system, biblioteca de componentes e fluxos de carrinho e pagamento. No backend, hardening e mais testes.</p>
+          </div>
+          <div class="tl reveal">
+            <span class="when">15 set – 05 out · Sprint 02</span>
+            <h3>Segurança, checkout e CI/CD <span class="us-count rose">· 24 US</span></h3>
+            <p>Correção de IDOR, rate limiting, LGPD, helmet e correlation ID. Carrinho, checkout e confirmação de pedido integrados ao gateway, nova Home, listagem e detalhe de produto, e CI/CD do frontend.</p>
+          </div>
+          <div class="tl reveal">
+            <span class="when">06 – 26 out · Sprint 03</span>
+            <h3>Avaliações, painel e PDV <span class="us-count rose">· 28 US</span></h3>
+            <p>Avaliações de ponta a ponta com compra verificada, integração com o MeasureSoftGram, telas administrativas validadas (visão geral, estoque, produtos e pedidos) e prototipação responsiva das jornadas de gestão e de PDV.</p>
+          </div>
+          <div class="tl major reveal">
+            <span class="when">Nov 2026</span>
+            <h3>Do projeto à vitrine</h3>
+            <p>Material comercial para lojistas (apresentação e folder) e este portfólio, que posicionam o DK Fashion como caso de uso das soluções.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLANS -->
+      <section id="clans">
+        <div class="reveal">
+          <span class="eyebrow">Organização</span>
+          <h2 style="margin-top:14px">Três clans, atuação flexível</h2>
+          <p class="lead" style="margin-top:16px">Em GCES o time se dividiu em trios com um foco principal. A divisão é ponto de partida, não fronteira: quem precisa ajuda outra frente quando a sprint pede.</p>
+        </div>
+        <div class="clans" style="margin-top:28px">
+          <div class="clan reveal"><span class="sig">DE</span><h3>Clan Infra</h3><p>Garantia de qualidade, métricas, pipelines e deploy.</p><div class="tags"><span class="tag neutral">Bruno</span><span class="tag neutral">Eduardo</span><span class="tag neutral">Márcio</span></div></div>
+          <div class="clan reveal"><span class="sig">K</span><h3>Clan Design</h3><p>Design a partir da conversa com a cliente, design system e protótipos.</p><div class="tags"><span class="tag neutral">Ana Luiza S.</span><span class="tag neutral">Yzabella</span><span class="tag neutral">Mateus</span></div></div>
+          <div class="clan reveal"><span class="sig">G</span><h3>Clan Dev</h3><p>Implementação de backend e frontend, segurança e novas funcionalidades.</p><div class="tags"><span class="tag neutral">Gabriel</span><span class="tag neutral">Ana Luiza K.</span><span class="tag neutral">Leonardo</span></div></div>
+        </div>
+      </section>
+
+      <!-- PRÁTICAS -->
+      <section id="praticas">
+        <div class="reveal">
+          <span class="eyebrow">Práticas</span>
+          <h2 style="margin-top:14px">Tudo registrado, tudo rastreável</h2>
+        </div>
+        <div class="practice" style="margin-top:28px">
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/documentacao/blob/main/docs/gitflow.md" target="_blank" rel="noopener"><h4>Gitflow com main estável</h4><p>Branch por issue, integração na <code>dev</code>, deploy só a partir da <code>main</code>, com validação automática antes de qualquer merge.</p></a>
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/documentacao/blob/main/docs/contributing_guidelines.md" target="_blank" rel="noopener"><h4>Guia de contribuição</h4><p>Padrões de commit verificados por hook, revisão por pares e projeto aberto a novas pessoas.</p></a>
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/documentacao/blob/main/docs/sprints.md" target="_blank" rel="noopener"><h4>Relatórios de sprint</h4><p>Cada entrega aponta para as issues e PRs que a compõem, em todos os repositórios.</p></a>
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/documentacao/tree/main/docs/atas_reuniao" target="_blank" rel="noopener"><h4>Atas com a cliente</h4><p>As decisões de produto ficam registradas junto de quem participou e dos encaminhamentos.</p></a>
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/documentacao/blob/main/docs/prototipo.md" target="_blank" rel="noopener"><h4>Prototipação no Figma</h4><p>Fluxos validados antes de virar código, com versões para desktop e celular.</p></a>
+          <a class="reveal" href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Backend/tree/main/docs/diagnosticos" target="_blank" rel="noopener"><h4>Diagnósticos com evidência</h4><p>Cada correção de segurança tem um documento de diagnóstico e um script que reproduz o antes e o depois.</p></a>
+        </div>
+      </section>
+
+      <!-- EQUIPE -->
+      <section id="equipe">
+        <div class="reveal">
+          <span class="eyebrow">Equipe</span>
+          <h2 style="margin-top:14px">Quem construiu</h2>
+          <p class="lead" style="margin-top:16px">Integrantes das duas disciplinas. Clique para ver o perfil no GitHub.</p>
+        </div>
+        <div class="team" style="margin-top:28px">
+          <a class="person reveal" href="https://github.com/Ana-Luiza-SC" target="_blank" rel="noopener"><img src="https://github.com/Ana-Luiza-SC.png?size=160" alt="" loading="lazy"><strong>Ana Luiza Soares</strong><span>Design</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/luluaroeira" target="_blank" rel="noopener"><img src="https://github.com/luluaroeira.png?size=160" alt="" loading="lazy"><strong>Ana Luiza Komatsu</strong><span>Dev</span><div class="tags"><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/BrunoBReis" target="_blank" rel="noopener"><img src="https://github.com/BrunoBReis.png?size=160" alt="" loading="lazy"><strong>Bruno Bragança</strong><span>Infra</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/DiceRunner714" target="_blank" rel="noopener"><img src="https://github.com/DiceRunner714.png?size=160" alt="" loading="lazy"><strong>Eduardo Matheus</strong><span>Infra</span><div class="tags"><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/SAnjos3" target="_blank" rel="noopener"><img src="https://github.com/SAnjos3.png?size=160" alt="" loading="lazy"><strong>Gabriel Soares</strong><span>Dev</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/leohssjr" target="_blank" rel="noopener"><img src="https://github.com/leohssjr.png?size=160" alt="" loading="lazy"><strong>Leonardo Henrique</strong><span>Dev</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/DeM4rcio" target="_blank" rel="noopener"><img src="https://github.com/DeM4rcio.png?size=160" alt="" loading="lazy"><strong>Márcio Henrique</strong><span>Infra</span><div class="tags"><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/MVConsorte" target="_blank" rel="noopener"><img src="https://github.com/MVConsorte.png?size=160" alt="" loading="lazy"><strong>Mateus Villela</strong><span>Design</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+          <a class="person reveal" href="https://github.com/Pabloserrapxx" target="_blank" rel="noopener"><img src="https://github.com/Pabloserrapxx.png?size=160" alt="" loading="lazy"><strong>Pablo</strong><span>Requisitos</span><div class="tags"><span class="tag">TPPE</span></div></a>
+          <a class="person reveal" href="https://github.com/redjsun" target="_blank" rel="noopener"><img src="https://github.com/redjsun.png?size=160" alt="" loading="lazy"><strong>Yzabella Miranda</strong><span>Design</span><div class="tags"><span class="tag">TPPE</span><span class="tag dark">GCES</span></div></a>
+        </div>
+
+        <nav class="pager" aria-label="Navegação entre páginas" style="margin-top:56px">
+          <a href="engenharia.html"><small>Anterior</small><span>Engenharia</span></a>
+          <a class="next" href="index.html"><small>Voltar ao</small><span>Início</span></a>
+        </nav>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-mark">DK<small>FASHION</small></span>
+        <p style="margin-top:18px;max-width:34ch">Desenvolvido com uma loja real. Projeto acadêmico da Universidade de Brasília.</p>
+      </div>
+      <div>
+        <h4>Portfólio</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
+          <li><a href="engenharia.html">Engenharia</a></li>
+          <li><a href="processo.html">Processo e equipe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Frontend" target="_blank" rel="noopener">Frontend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/MarketPlace-Backend" target="_blank" rel="noopener">Backend</a></li>
+          <li><a href="https://github.com/TPPE-2026-1-Marketplace/documentacao" target="_blank" rel="noopener">Documentação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Disciplinas</h4>
+        <ul>
+          <li>TPPE · 2026.1</li>
+          <li>GCES · 2026.2</li>
+          <li>Universidade de Brasília</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>DK Fashion · Sua loja conectada. Sua gestão no controle.</span>
+      <span>© <span data-year>2026</span> Equipe TPPE-2026-1-Marketplace</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
